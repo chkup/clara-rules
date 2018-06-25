@@ -1,5 +1,7 @@
 language: clojure
 lein: 2.7.1
+before_install:
+  - curl -sSL https://raw.githubusercontent.com/cljs-oss/canary/master/scripts/install-canary.sh | bash
 script:
   - lein test
   - lein test :generative
